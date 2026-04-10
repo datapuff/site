@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datapuff</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f5f0e8;
+      --green-soft: #a8b89a;
+      --green-muted: #7a9470;
+      --earth: #c4a882;
+      --text-main: #4a4a3a;
+      --text-sub: #8a8a72;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--cream);
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 1.2s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .wordmark {
+      font-size: clamp(2.4rem, 8vw, 5.5rem);
+      font-weight: 300;
+      letter-spacing: 0.275em;
+      color: #637d5a;
+      text-transform: lowercase;
+      margin-bottom: 1.6rem;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1.5px;
+      background: linear-gradient(90deg, var(--green-soft), var(--earth));
+      margin: 0 auto 1.6rem;
+      border-radius: 2px;
+    }
+
+    .tagline {
+      font-size: clamp(0.75rem, 2vw, 0.95rem);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--green-muted);
+      text-transform: lowercase;
+      margin-bottom: 0.65rem;
+    }
+
+    .contact {
+      font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: var(--text-sub);
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--earth);
+      padding-bottom: 1px;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact a:hover {
+      color: var(--green-muted);
+      border-color: var(--green-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="wordmark">d a t a p u f f</h1>
+    <div class="divider"></div>
+    <p class="tagline">personalized software + ml solutions</p>
+    <p class="contact"><a href="mailto:hello@datapuff.dev">hello@datapuff.dev</a></p>
+  </div>
+</body>
+</html>
